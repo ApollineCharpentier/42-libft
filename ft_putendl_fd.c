@@ -1,39 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/10 10:26:55 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/11 19:02:39 by apcharpe         ###   ########.fr       */
+/*   Created: 2020/02/12 16:43:31 by apcharpe          #+#    #+#             */
+/*   Updated: 2020/02/12 16:45:42 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_putendl_fd(char *s, int fd)
 {
-	size_t i;
+	int i;
 
-	if (!dst && !src)
-		return (NULL);
 	i = 0;
-	while (i < n)
+	if (!s)
+		return ;
+	if (fd < 0)
+		return ;
+	while (s[i])
 	{
-		((unsigned char*)dst)[i] = ((unsigned char*)src)[i];
+		write(fd, &s[i], 1);
 		i++;
 	}
-	return (dst);
-}
-
-int		main(void)
-{
-	char src[100] = "this is a test";
-	char dst[5];
-
-	ft_memcpy(dst, src, 25);
-	printf("%s\n", dst);
+	write(fd, "\n", 1);
 }

@@ -6,14 +6,14 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 14:57:09 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/11 16:29:02 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/11 17:52:53 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	ft_strlen(const char *str)
+int			ft_strlen(const char *str)
 {
 	int i;
 
@@ -32,17 +32,17 @@ static int	ft_ischar(char c, const char *set)
 	len = ft_strlen(set);
 	while (i < len)
 	{
-		if(c == set[i])
+		if (c == set[i])
 			return (1);
 		i++;
 	}
 	return (0);
 }
 
-static int start_number(const char *s1, const char *set)
+static int	start_number(const char *s1, const char *set)
 {
 	int i;
-	
+
 	i = 0;
 	while (ft_ischar(s1[i], set))
 		i++;
@@ -55,20 +55,20 @@ static int	end_number(const char *s1, const char *set)
 
 	i = ft_strlen(s1) - 1;
 	while (ft_ischar(s1[i], set) && i > 0)
-		i --;
+		i--;
 	return (i);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
-	int str_len;
-	int i;
-	char *str;
+	int		str_len;
+	int		i;
+	char	*str;
 
-	if(!s1 || !set)
+	if (!s1 || !set)
 		return (NULL);
 	str_len = end_number(s1, set) - start_number(s1, set) + 1;
-	if(!(str = malloc(sizeof(char) * (str_len + 1))))
+	if (!(str = malloc(sizeof(char) * (str_len + 1))))
 		return (NULL);
 	str[str_len] = '\0';
 	i = end_number(s1, set);
@@ -81,7 +81,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 
-int	main(void)
+int			main(void)
 {
 	char *s1 = "apelor";
 	char *set = "apoma";

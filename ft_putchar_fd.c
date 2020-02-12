@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/10 10:26:55 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/11 19:02:39 by apcharpe         ###   ########.fr       */
+/*   Created: 2020/02/12 16:22:15 by apcharpe          #+#    #+#             */
+/*   Updated: 2020/02/12 18:05:57 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_putchar_fd(char c, in fd)
 {
-	size_t i;
-
-	if (!dst && !src)
-		return (NULL);
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char*)dst)[i] = ((unsigned char*)src)[i];
-		i++;
-	}
-	return (dst);
-}
-
-int		main(void)
-{
-	char src[100] = "this is a test";
-	char dst[5];
-
-	ft_memcpy(dst, src, 25);
-	printf("%s\n", dst);
+	write(fd, &c, 1);
 }

@@ -6,7 +6,7 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/06 14:15:52 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/07 14:51:59 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/13 11:10:48 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,4 @@ char	*ft_strnstr(const char *str, const char *needle, size_t size)
 		i++;
 	}
 	return (NULL);
-}
-
-int		main(void)
-{
-	printf("%s\n", ft_strnstr("bonjour", "on", 3));
-	return (0);
 }

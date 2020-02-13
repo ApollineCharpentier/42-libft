@@ -6,7 +6,7 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/07 16:43:38 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/07 17:49:12 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/13 11:35:53 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,4 @@ void	*ft_memset(void *str, int c, size_t n)
 		i++;
 	}
 	return (str);
-}
-
-int		main(void)
-{
-	char str[50];
-
-	strcpy(str, "This is a test");
-	puts(str);
-	ft_memset(str, 'a', 4);
-	puts(str);
-	return (0);
 }

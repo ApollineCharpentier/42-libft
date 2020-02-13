@@ -6,22 +6,11 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 14:57:09 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/11 17:52:53 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/13 14:12:42 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-
-int			ft_strlen(const char *str)
-{
-	int i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 static int	ft_ischar(char c, const char *set)
 {
@@ -79,13 +68,4 @@ char		*ft_strtrim(char const *s1, char const *set)
 		str_len--;
 	}
 	return (str);
-}
-
-int			main(void)
-{
-	char *s1 = "apelor";
-	char *set = "apoma";
-
-	printf("%s\n", ft_strtrim(s1, set));
-	return (0);
 }

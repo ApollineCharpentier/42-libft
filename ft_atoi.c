@@ -6,7 +6,7 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/07 12:27:43 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/11 17:21:06 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/13 11:17:14 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,4 @@ int	ft_atoi(char *str)
 		return (-n);
 	else
 		return (n);
-}
-
-int	main(int argc, char **argv)
-{
-	(void)argc;
-	printf("%d\n", ft_atoi(argv[1]));
-	return (0);
 }

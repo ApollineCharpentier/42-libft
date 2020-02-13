@@ -6,12 +6,11 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 15:09:16 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/12 15:28:41 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/13 14:15:32 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static unsigned int	ft_abs(int n)
 {
@@ -54,9 +53,4 @@ char				*ft_itoa(int n)
 		size--;
 	}
 	return ((char *)str);
-}
-
-int					main(void)
-{
-	printf("%s\n", ft_itoa(54325));
 }

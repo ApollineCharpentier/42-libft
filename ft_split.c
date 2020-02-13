@@ -6,12 +6,11 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 13:01:42 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/12 14:19:42 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/13 14:13:34 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 static int	no_splits(char *str, char c)
 {
@@ -70,17 +69,4 @@ char		**ft_split(char const *s, char c)
 	}
 	tab[j] = 0;
 	return (tab);
-}
-
-int			main(void)
-{
-	char	*str = "emapaq";
-	char	c = 'a';
-	int		start = 0;
-	char	**tab;
-
-	tab = ft_split(str, c);
-	printf("%d\n", count_splits(str, c));
-	printf("%d\n", word_len(str, start, c));
-	printf("%c\n", tab[2][0]);
 }

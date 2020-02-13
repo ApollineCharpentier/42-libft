@@ -6,13 +6,11 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 12:19:38 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/10 14:44:58 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/13 12:02:31 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
@@ -31,16 +29,4 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 		i++;
 	}
 	return (NULL);
-}
-
-int		main(void)
-{
-	char src[100] = "this is a test";
-	char dst[1];
-
-	memset(dst, '\0', 100);
-	ft_memccpy(dst, src, 'a', 20);
-	printf("%s\n", dst);
-	memccpy(dst, src, 'a', 20);
-	printf("%s\n", dst);
 }

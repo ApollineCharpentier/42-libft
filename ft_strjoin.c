@@ -6,21 +6,11 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 10:59:31 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/11 15:50:26 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/13 14:10:35 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *str)
-{
-	size_t i;
-
-	while (str[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -45,15 +35,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	str[i] = '\0';
 	return (str);
-}
-
-int		main(void)
-{
-	char *s1 = "Hello";
-	char *s2 = "world";
-	char *str;
-
-	str = ft_strjoin(s1, s2);
-	printf("%s\n", str);
-	return (0);
 }

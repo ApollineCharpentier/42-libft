@@ -6,14 +6,13 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/03 17:27:05 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/13 14:39:32 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/13 15:55:14 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
@@ -55,11 +54,5 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
-
-int		main_strnstr(void);
-int		main_memset(void);
-int		main_memcpy(void);
-int		main_memccpy(void);
-int		main_memmove(void);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/03 17:27:05 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/13 15:55:14 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/14 17:24:23 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ int		ft_isprint(int c);
 int		ft_toupper(int i);
 int		ft_tolower(int i);
 char	*ft_strchr(const char *s, int c);
-char	*ft_strchr(const char *s, int c);
+char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, unsigned int n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char *str, const char *needle, size_t size);
-int		ft_atoi(char *str);
+int		ft_atoi(const char *str);
 
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s);

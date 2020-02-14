@@ -6,7 +6,7 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 10:59:31 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/13 14:10:35 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/13 16:53:20 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	i;
-	size_t	j;
 	char	*str;
 
 	i = 0;

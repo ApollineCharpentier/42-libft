@@ -6,7 +6,7 @@
 #    By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/13 15:46:39 by apcharpe          #+#    #+#              #
-#    Updated: 2020/02/13 16:09:57 by apcharpe         ###   ########.fr        #
+#    Updated: 2020/02/13 17:27:54 by apcharpe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,8 +16,7 @@ CC = gcc
 
 CFLAGS = -Wall -Werror -Wextra
 
-SRCS = 
-	 ft_atoi.c \
+SRCS = ft_atoi.c \
 	 ft_bzero.c \
 	 ft_calloc.c \
 	 ft_isalnum.c \
@@ -52,9 +51,11 @@ SRCS =
 	 ft_tolower.c \
 	 ft_toupper.c \
 
-OBJS = $(SRCS:.c=.o)
 
 INCL = libft.h
+
+OBJS = $(SRCS:.c=.o)
+
 
 all:	$(NAME)
 
@@ -74,4 +75,3 @@ fclean:	clean
 re: fclean all
 
 .PHONY: all clean fclean re
-

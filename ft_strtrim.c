@@ -6,7 +6,7 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/11 14:57:09 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/13 14:12:42 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/14 16:01:40 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static int	ft_ischar(char c, const char *set)
 {
-	int i;
-	int len;
+	int	i;
+	int	len;
 
 	i = 0;
 	len = ft_strlen(set);
@@ -57,6 +57,8 @@ char		*ft_strtrim(char const *s1, char const *set)
 	if (!s1 || !set)
 		return (NULL);
 	str_len = end_number(s1, set) - start_number(s1, set) + 1;
+	if (str_len < 0)
+		str_len = 0;
 	if (!(str = malloc(sizeof(char) * (str_len + 1))))
 		return (NULL);
 	str[str_len] = '\0';

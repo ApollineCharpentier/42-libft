@@ -6,7 +6,7 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 13:01:42 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/13 14:13:34 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/14 19:10:25 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int	s_len(char *str, int start, char c)
 		return (0);
 	while (str[start + i] != '\0' && str[start + i] != c)
 		i++;
-	return (i);
+	return (i + 1);
 }
 
 char		**ft_split(char const *s, char c)

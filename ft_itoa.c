@@ -6,7 +6,7 @@
 /*   By: apcharpe <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/12 15:09:16 by apcharpe          #+#    #+#             */
-/*   Updated: 2020/02/14 16:02:31 by apcharpe         ###   ########.fr       */
+/*   Updated: 2020/02/14 19:31:49 by apcharpe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static unsigned int	ft_abs(int n)
 
 static unsigned int	ft_size(unsigned int n)
 {
-	unsigned int size;
+	int size;
 
 	size = 0;
 	n = ft_abs(n);
@@ -33,13 +33,13 @@ static unsigned int	ft_size(unsigned int n)
 
 char				*ft_itoa(int n)
 {
-	char			*str;
-	unsigned int	nb;
-	unsigned int	size;
+	char	*str;
+	long	nb;
+	int		size;
 
 	nb = ft_abs(n);
 	size = ft_size(nb) + 1 + (n < 0 ? 1 : 0);
-	if (!(str = (char*)malloc(sizeof(char) * (size + 1))))
+	if (!(str = ft_calloc(sizeof(char), size)))
 		return (0);
 	str[size - 1] = '\0';
 	if (n == 0)
